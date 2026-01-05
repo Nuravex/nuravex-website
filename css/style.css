@@ -18,7 +18,7 @@
 .header-container {
     max-width: 1500px;
     margin: 0 auto;
-    padding: 16px 10px;
+    padding: 5px 10px;
 
     display: flex;
     justify-content: space-between;
@@ -43,6 +43,9 @@
     color: #0077ff;
 }
 
+section {
+  scroll-margin-top: 90px;
+} 
 /*===== hero section =====*/
 
 .hero {
@@ -129,7 +132,7 @@
 
 /* ===== Contact Section ===== */
 .contact {
-    padding: 80px 20px;
+    padding: 110px 20px;
     background-color: #f9fafb;
 }
 
@@ -205,7 +208,7 @@
     /* dark background */
     color: #fff;
     /* text color */
-    padding: 40px 20px;
+    padding: 10px 5px;
     text-align: center;
 }
 
