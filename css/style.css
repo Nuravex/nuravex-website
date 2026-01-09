@@ -446,9 +446,17 @@ background-color: #00c6ff;
     padding: 8px 12px;
     border-radius: 15px;
     max-width: 80%;
-    align-self: flex-end;
     word-wrap: break-word;
 }
+
+.chat-message.user {
+    align-self: flex-end;
+}
+
+.chat-message.bot {
+    align-self: flex-start;
+}
+
 
 /* Show chat box when checkbox is checked */
 .chat-toggle:checked + .chat-bubble + .chat-box {
