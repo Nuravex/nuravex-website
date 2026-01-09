@@ -52,7 +52,7 @@ html {
 }
 
 /*==== header mobile ====*/
-@media (max-width:968px) {
+@media (max-width:768px) {
     .header-container {
         flex-direction: column;
         align-items: center;
@@ -123,7 +123,7 @@ section {
     height: auto;
 }
 
-@media (max-width:968px) {
+@media (max-width:768px) {
     .hero {
         padding: 60px 16px;
     }
@@ -190,7 +190,7 @@ section {
     height: auto;
 }
 
-@media (max-width:968px) {
+@media (max-width:768px) {
     .about {
         padding: 60px 16px;
     }
@@ -312,7 +312,7 @@ section {
     background-color: #00c6ff;
 }
 
-@media (max-width:968px) {
+@media (max-width:768px) {
     .contact {
         padding: 60px 16px;
     }
@@ -411,15 +411,26 @@ section {
     box-shadow: 0 6px 18px #00c6ff;
     display: none;
     z-index: 9999;
+    padding: 10px;
 }
 
 /* Close button */
 .chat-close {
-    display: block;
-    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
     padding: 5px 10px;
     font-size: 24px;
     cursor: pointer;
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 50%;
+    background-color: #eee;
+}
+.chat-close:hover{
+background-color: #00c6ff;
 }
 
 /* Show chat box when checkbox is checked */
@@ -427,7 +438,49 @@ section {
     display: flex;
     flex-direction: column;
 }
-
+.chat-user-input{
+    flex: 1;
+    margin-top: auto;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 15px;
+    border: 1px solid #555;
+    background: transparent;
+    outline: none;
+    
+}
+.chat-user-input:focus{
+    border-color: #00c6ff;
+}
+.chat-user-input::placeholder{
+    color: #555;
+}
+.chat-input-wrapper{
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 1px;
+    background-color: #fff;
+}
+.chat-send-btn{
+    border: none;
+    background: #eee;
+    color: #00c6ff;
+    width: 36px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+.chat-send-btn:focus{
+    background: #00c6ff;
+    color: #eee;
+}
+.chat-send-btn:hover{
+    background-color: #00c6ff;
+    color: #eee;
+}
 @media (max-width:480px) {
     .chat-bubble {
         bottom: 16px;
@@ -475,7 +528,7 @@ section {
     margin-top: 10px;
 }
 
-@media(max-width:968px) {
+@media(max-width:768px) {
     .footer {
         padding: 10px 5px;
     }

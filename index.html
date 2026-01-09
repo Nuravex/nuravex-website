@@ -126,18 +126,22 @@
 
 
 
-<!-- Hidden checkbox to control toggle -->
-<input type="checkbox" id="chatToggle" class="chat-toggle" />
+    <!-- Hidden checkbox to control toggle -->
+    <input type="checkbox" id="chatToggle" class="chat-toggle" />
 
-<!-- Chat Bubble -->
-<label for="chatToggle" class="chat-bubble">
-    <img src="assets/icons/Untitled design.png" alt="Nuravex">
-</label>
+    <!-- Chat Bubble -->
+    <label for="chatToggle" class="chat-bubble">
+        <img src="assets/icons/Untitled design.png" alt="Nuravex">
+    </label>
 
-<!-- Chat Box -->
-<div class="chat-box">
-    <label for="chatToggle" class="chat-close">×</label>
-</div>
+    <!-- Chat Box -->
+    <div class="chat-box">
+        <label for="chatToggle" class="chat-close">×</label>
+        <div class="chat-input-wrapper">
+            <input type="text" class="chat-user-input" placeholder="Type your message..">
+            <button class="chat-send-btn">➤</button>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
