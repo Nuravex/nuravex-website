@@ -432,6 +432,23 @@ section {
 .chat-close:hover{
 background-color: #00c6ff;
 }
+.chat-messages{
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.chat-message{
+    background: #00c6ff;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 15px;
+    max-width: 80%;
+    align-self: flex-end;
+    word-wrap: break-word;
+}
 
 /* Show chat box when checkbox is checked */
 .chat-toggle:checked + .chat-bubble + .chat-box {
