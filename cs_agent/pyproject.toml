@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "customer-support-agent"
+version = "0.1.0"
+description = "A LangGraph-based customer support agent"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "langchain",
+    "langgraph",
+    "typing_extensions"
+]
+
+[tool.setuptools]
+packages = ["app"]
