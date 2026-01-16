@@ -8,7 +8,7 @@ class Settings:
 
     MODEL_NAME = os.getenv(
         "MODEL_NAME",
-        "claude-sonnet-4-5-20250929"
+        "gemma3:1b"
     )
 
     TEMPERATURE = float(

@@ -1,3 +1,5 @@
 # nuravex-website
 building nuravex website
-uvicorn main:app --reload
+
+set PYTHONPATH=cs_agent
+uvicorn backend.server:app --reload

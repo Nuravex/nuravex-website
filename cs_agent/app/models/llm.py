@@ -1,9 +1,11 @@
-from langchain.chat_models import init_chat_model
+from langchain_ollama import ChatOllama
+from langchain_ollama import ChatOllama
 from app.config.settings import settings
 
 
 def get_llm():
-    return init_chat_model(
-        settings.MODEL_NAME,
-        temperature=settings.TEMPERATURE
+    return ChatOllama(
+        model=settings.MODEL_NAME,
+        temperature=settings.TEMPERATURE,
+        base_url="http://localhost:11434"
     )

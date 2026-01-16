@@ -441,20 +441,25 @@ background-color: #00c6ff;
     gap: 8px;
 }
 .chat-message{
-    background: #00c6ff;
-    color: #333;
+    
     padding: 8px 12px;
     border-radius: 15px;
     max-width: 80%;
     word-wrap: break-word;
+    white-space: pre-wrap;
+    line-height: 1.4;
 }
 
 .chat-message.user {
     align-self: flex-end;
+    background: #00c6ff;
+    color: #333;
 }
 
 .chat-message.bot {
     align-self: flex-start;
+    background: #00c6ff;   
+    color: #333; 
 }
 
 

@@ -3,7 +3,9 @@ const sendBtn = document.querySelector('.chat-send-btn');
 const messages = document.querySelector('.chat-messages');
 
 async function sendMessage() {
+    try {
     const question = input.value.trim();
+    console.log("Sending question:", question);
     if (!question) return;
 
     // Show user message in chat
@@ -21,17 +23,29 @@ async function sendMessage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question })
     });
-
-    const data = await res.json();
+    console.log("FETCH STATUS:", res.status);
+    const text = await res.text();
+    console.log("Backend response:", text);
+    // 5️⃣ Parse JSON
+    const data = JSON.parse(text);
+    console.log("PARSED DATA:", data);
 
     // Show bot response
     const botMsg = document.createElement('div');
     botMsg.classList.add('chat-message', 'bot');
-    botMsg.textContent = data.answer;
+    botMsg.textContent = data.response;
+    console.log(
+        "BOT TEXT =",
+        botMsg.textContent,
+        botMsg.textContent.length
+    );
     messages.appendChild(botMsg);
 
     // Scroll to latest message
     messages.scrollTop = messages.scrollHeight;
+    } catch (err) {
+        console.error("JS ERROR:", err);
+    }
 }
 
 // Trigger send on button click

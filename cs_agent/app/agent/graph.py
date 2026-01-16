@@ -5,7 +5,7 @@ from app.config.constants import LLM_NODE
 from app.config.constants import MAX_LLM_CALLS
 from typing import Literal
 
-def should_continue(state: SupportState) -> Literal[LLM_NODE, END]:
+def should_continue(state: SupportState) -> Literal["llm_node", "__end__"]:
     if state["llm_calls"] >= MAX_LLM_CALLS:
         return END
 
